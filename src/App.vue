@@ -8,10 +8,14 @@ getCategory().then((res) => {
 </script>
 
 <template>
+  <h1>hello</h1>
   <RouterView />
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+h1 {
+  color: $sucColor;
+}
 header {
   line-height: 1.5;
   max-height: 100vh;

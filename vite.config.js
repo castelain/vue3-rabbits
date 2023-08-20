@@ -12,6 +12,7 @@ export default defineConfig({
     preprocessorOptions: {
       scss: {
         additionalData: `@use "@/styles/element/index.scss" as *;`,
+        additionalData: `@use "@/styles/var.scss" as *;`,
       },
     },
   },
@@ -30,7 +31,7 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
     }
   }
 })
