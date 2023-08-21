@@ -1,21 +1,28 @@
 <script setup>
-  import LayoutNav from '@/views/Layout/components/LayoutNav';
-  import LayoutHeader from '@/views/Layout/components/LayoutHeader';
-  import LayoutFooter from '@/views/Layout/components/LayoutFooter';
-
+import LayoutNav from "@/views/Layout/components/LayoutNav.vue";
+import LayoutHeader from "@/views/Layout/components/LayoutHeader.vue";
+import LayoutFooter from "@/views/Layout/components/LayoutFooter.vue";
 </script>
 
 <template>
-  <LayoutNav />
-  <LayoutHeader />
-  <div class="main">
-    <RouterView />
+  <div class="layout">
+    <LayoutNav />
+    <LayoutHeader />
+    <div class="main">
+      <RouterView />
+    </div>
+    <LayoutFooter />
   </div>
-  <LayoutFooter />
 </template>
 
 <style lang="scss" scoped>
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   .main {
+    flex: 1;
     background-color: $defaultBgColor;
   }
+}
 </style>
